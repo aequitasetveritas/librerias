@@ -1,3 +1,4 @@
+/* Funciones para UART del MSP430G2955 */
 #include "uart.h"
 #include <msp430.h> 
 #include <msp430g2955.h>
@@ -27,3 +28,7 @@ void send_uart(char *data)
 	}
 }
 
+void send_dato(char data){
+    while (!(IFG2 & UCA0TXIFG)); //Wait UART to finish before next send
+    UCA0TXBUF = data;
+}

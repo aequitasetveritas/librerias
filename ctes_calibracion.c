@@ -1,3 +1,4 @@
+/* Funciones para grabar las constantes del DCO del MSP430G2955 */
 #include "ctes_calibracion.h"
 #include <msp430.h> 
 #include <msp430g2955.h>
